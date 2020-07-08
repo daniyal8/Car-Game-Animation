@@ -1,0 +1,72 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    overflow-y: hidden;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.city-outer{width: 100%; height: 100vh;position: relative;overflow-x: hidden;background: linear-gradient(-360deg,rgb(143, 255, 245),rgb(239, 130, 13));}
+.city-outer::before{
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    top: 3em;
+    content: '';
+    background: radial-gradient(rgba(230,222,222,.25),rgba(255,255,255,.25));
+}
+.Cloud{
+    background: url(..//images/cloud.png);
+    height: 160px;
+    background-repeat: repeat-x;
+    margin-top: 3em;
+    animation: cloudanimations 9s linear infinite;
+}
+.city-inner{
+    background: url('..//images/way.png');
+    width: 500%;
+    height: 650px;
+    position: absolute;
+    bottom: 0;
+    background-repeat: repeat-x;
+    animation: cityanimations 5s linear infinite;
+}
+.car{
+    position: absolute;
+    bottom: 9%;
+    left: 15%;
+    animation: caranimations 1s linear infinite;
+}
+@keyframes cloudanimations{
+    100%{
+        transform: translateX(1200px);
+        opacity: .4;
+    }
+}
+@keyframes cityanimations{
+    100%{
+        transform: translateX(-2500px);
+    }
+}
+@keyframes caranimations{
+    100%{
+        transform: translateY(-2px);
+    }
+    50%{
+        transform: translateY(1px);
+    }
+    0%{
+        transform: translateY(-2px);
+    }
+}
+.daytonight{
+    background: linear-gradient(180deg,rgb(16,17,29),rgb(0,16,58));
+}
+cityanimation{
+    animation: cityanimations 5s linear infinite;
+}
